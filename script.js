@@ -1,27 +1,12 @@
-// nie działa funkcja średniej długości słowa oraz funkcja liczenia znaków bez spacji
-
-
-
-document.getElementById("count-words").innerHTML = 0;
-document.getElementById("count-signs-with-spaces").innerHTML = 0;
-document.getElementById("count-signs-without-spaces").innerHTML = 0;
-document.getElementById("read-speed").innerHTML = 0;
-document.getElementById("longestWord").innerHTML = "---";
+document.getElementById("count-words").innerHTML = 0
+document.getElementById("count-signs-with-spaces").innerHTML = 0
+document.getElementById("count-signs-without-spaces").innerHTML = 0
+document.getElementById("read-speed").innerHTML = 0
+document.getElementById("longestWord").innerHTML = 0
 
 
 
 
-function analyzeText() {
-    countWords();
-    countSigns();
-    countSignsWithoutSpaces();
-    readSpeed();
-    bigLetters();
-    longestWord();
-}
-
-
-// 1. liczba znaków - osobno ze spacjami i bez
 function countSigns() {
     const textarea = document.querySelector('textarea');
     const text = textarea.value;
@@ -54,7 +39,6 @@ return letterCounter
 
 
 
-// 2. liczba słów
 function countWords() {
     const text = document.getElementById("user-input").value
     const textTrimmed = text.trim()
@@ -66,7 +50,6 @@ function countWords() {
 
 
 
-// 3. najdłuższe słowo
 function longestWord() {
     const words = document.querySelector('textarea').value
         .trim()
@@ -89,21 +72,12 @@ function longestWord() {
 }
 
 
-
-
-// 4. średnia długość słowa
 function averageWordLength() {
  
 
-    // PROBOWAŁEM PARU SPOSOBOW ALE NIE WIEM CO ZBYTNIO ZROBIC
 }
 
 
-
-
-
-
-// 5. procent wielkich liter w tekście
 function bigLetters() {
 
     const text = document.querySelector('textarea').value;
@@ -122,14 +96,8 @@ function bigLetters() {
 
 
 
-
-
-
-// 6. czas czytania, zakładając 200 słów na minutę
 function readSpeed() {
     const letterCounter = countSignsWithoutSpaces()
-
-
 
 
     const characterReadPerMinute = 200
